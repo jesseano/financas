@@ -687,13 +687,13 @@ function openAdd() {
   document.getElementById('f-repeticoes').value='12';
   document.getElementById('credito-opts').classList.remove('show');
   document.getElementById('recorrencia-opts').classList.remove('show');
-  setTipo('entrada'); setCategoria('empresa'); setPagamento('pix');
+  setTipo('saida'); setCategoria('pessoal'); setPagamento('pix');
 }
 function setTipo(t) {
   formTipo=t;
   document.querySelectorAll('.seg-btn.entrada,.seg-btn.saida').forEach(b=>b.classList.remove('active'));
   document.querySelector(`.seg-btn.${t}`).classList.add('active');
-  document.getElementById('group-pagamento').style.display=t==='saida'?'block':'none';
+  document.getElementById('group-pagamento').style.display='block';
 }
 function setCategoria(c) {
   formCategoria=c;
